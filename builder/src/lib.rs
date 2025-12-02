@@ -156,6 +156,13 @@ impl BuilderConfig {
             .stdout(Stdio::inherit())
             .stderr(Stdio::inherit());
 
+        #[cfg(feature = "crosscompile")]
+        {
+            builder = builder
+                .arg("--target")
+                .arg("x86_64-pc-windows-gnu");
+        }
+
         if let Some(message_box) = self.message_box {
             builder = builder.arg("--features");
 

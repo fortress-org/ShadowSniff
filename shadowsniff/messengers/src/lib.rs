@@ -1,3 +1,4 @@
+#![feature(let_chains)]
 /*
  * This file is part of ShadowSniff (https://github.com/sqlerrorthing/ShadowSniff)
  *
