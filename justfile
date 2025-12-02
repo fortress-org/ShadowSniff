@@ -8,7 +8,7 @@ release:
                -C link-arg=/DEBUG:NONE \
                -C link-arg=/RELEASE \
                " \
-    cargo build --release
+    cargo build --release --target x86_64-pc-windows-gnu
 
 debug:
     cargo build
